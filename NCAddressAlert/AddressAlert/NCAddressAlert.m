@@ -277,10 +277,10 @@ typedef enum : NSUInteger {
 //确定
 - (void)defineButtonClick {
     if (self.selectedProvinceDic && self.selectedCityDic && self.selectedDistrictDic) {
-        [self hideView];
         if (self.block) {
             self.block(self.selectedProvinceDic, self.selectedCityDic, self.selectedDistrictDic);
         }
+        [self hideView];
     } else {
         NSLog(@"请完成区域选择");
     }
